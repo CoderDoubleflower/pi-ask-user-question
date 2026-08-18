@@ -63,6 +63,7 @@ export function registerAskUserQuestion(
 		],
 		parameters: AskUserQuestionParamsSchema,
 		executionMode: "sequential",
+		renderShell: "self",
 
 		async execute(_toolCallId, rawParams, signal, _onUpdate, ctx) {
 			const params = rawParams as Static<typeof AskUserQuestionParamsSchema> & AskUserQuestionParamsInput;

@@ -37,6 +37,7 @@ test("registers a sequential interactive tool", () => {
 	const { tool } = setup();
 	assert.equal(tool.name, "ask_user_question");
 	assert.equal(tool.executionMode, "sequential");
+	assert.equal(tool.renderShell, "self");
 });
 
 test("executes the TUI interaction and balances open-tui events", async () => {
